@@ -1,0 +1,31 @@
+body {
+    background-color: #ffe8ff;
+  }
+  
+  body {
+    font-family: "Press Start 2P", cursive;
+    color: #663399;
+  }
+  
+  h1, h2 {
+    font-family: "Press Start 2P", cursive;
+    color: #6633ca;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
+  }
+  
+  h3 {
+    font-family: "Press Start 2P", cursive;
+    color: #cb6699;
+    letter-spacing: 0px;
+  }
+
+  a {
+    font-family: "Press Start 2P", cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff;
+    color: #9e98fd;
+    text-decoration: none;
+  }
