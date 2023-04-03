@@ -1,0 +1,138 @@
+/* Defines elements that will always be used. */
+:root {
+    background: linear-gradient(to bottom, #ffefdd, #e9bf90, #463426);
+    --main-color: #b4866b;
+    --bc-color: #ffefdd;
+    --tx-color: #463426;
+    --eye-color: #6f9060;
+  }
+
+/* Define the colors to be used. */
+element{
+    --main-color: #b4866b;
+    --bc-color: #ffefdd;
+    --tx-color: #463426;
+    --eye-color: #6f9060;
+}
+
+/* Make the wireframes in this section arranged horizontally with intervals and fill this area. */
+.section1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	margin: 10px 0;
+}
+
+/* Make the wireframes in this section arranged vertically with intervals and fill this area. */
+.section2 {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	margin: 10px 0;
+}
+
+/* Add basic alignment, spacing and border information to all wireframes and the content inside the wireframes. */
+.box {
+	flex: 1;
+	display: flex;
+	align-items:end;
+	justify-content:last baseline;
+	margin: 10px;
+	padding: 10px;
+    border-radius: 15px;
+}
+
+/* Define the height, border and inserted image information for each wireframe. */
+.box1 {
+    height: 500px;
+    border-radius: 50px 15px;
+    background-image: url("images/01.JPG");
+    background-size: cover;
+	border: 5px solid var(--tx-color);
+}
+
+
+.box2{
+    border-radius: 10px 40px;
+    background-image: url("images/02.JPG");
+    background-size: cover;
+    border: 5px solid var(--tx-color);
+}
+
+.box3{
+    width: 700px;
+    background-image: url("images/03.JPG");
+    background-size: cover;
+    border: 5px solid var(--eye-color);
+}
+
+.box4{
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bc-color);
+    border-radius: 35px;
+    border: 5px solid var(--eye-color);
+}
+
+
+.box5{
+    width: 350px;
+    height:500px;
+    background-image: url("images/05.JPG");
+    background-size: cover;
+    border: 5px solid var(--main-color);
+}
+
+.box6{
+    width: 350px;
+    height:500px;
+    background-image: url("images/06.JPG");
+    background-size: cover;
+    border: 5px solid var(--tx-color);
+}
+
+
+.box7{
+    width: 700px;
+    background-image: url("images/07.JPG");
+    background-size: cover;
+    border: 5px solid var(--tx-color);
+}
+
+.box8{
+    background-image: url("images/08.JPG");
+    background-size: cover;
+    border: 5px solid var(--main-color);
+}
+
+/* Define the font, size and color of each text. */
+h1 {
+    font-family: Monaco;
+	font-size: 66px;
+    color: var(--eye-color);
+}
+
+h2 {
+    font-family: Papyrus;
+	font-size: 36px;
+	color: var(--tx-color);
+	margin: 0;
+}
+
+h3{
+    font-family: Papyrus;
+    font-size: 36px;
+    color: var(--eye-color);
+    margin: 0;
+}
+
+h4{
+    font-family: Papyrus;
+    font-size: 36px;
+    color: var(--main-color);
+    margin: 0;
+}
