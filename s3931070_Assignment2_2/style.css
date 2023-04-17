@@ -1,0 +1,195 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 5px 0;
+  font-family: serif;
+}
+
+/* I designed a new color palette to accentuate the freshness of the recipe, with green and pink as the main colors, and blue accents. Warm tones and greens will make users more appetizing, and soft pinks will generate positive emotions in users so they will be more willing to browse the website and click links to try to make food. */
+:root{
+  --col-01:#fcdbd7;
+  --col-02:#f4f4e1;
+  --col-03:#ffacad;
+  --col-04:#c6d9a3;
+  --col-05:#b1c3d8;
+  --col-06:#df8e8f;
+  --col-07:#bfbaca;
+  --col-08:#7ea9e0;
+  --col-09:#de9cb7;
+  --border: 5px solid var(--col-04);
+}
+
+/* The gradient background can make users subconsciously feel the progress of browsing the webpage and add a sense of layering to the website. All wireframes use rounded corners to have a softer and warmer feel. */
+body{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--col-01), var(--col-02));
+  color: var(--col-03);
+  padding: 2vw;
+  border-radius: 50px;
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: 10px;
+}
+
+/* Enlarging the font size of category options allows users to quickly browse categories as soon as they enter the site. */
+.FilterBox{
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px;
+}
+
+/* Since the option classification part is in the upper part of the website page, the green background of the button will echo the pink background in the upper part of the website, making users notice the option button, and the white font will not overwhelm and can be seen eye-catchingly. */
+.FilterButton{
+  width: 200px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  background-color: var(--col-04);
+  border: 2px solid var(--col-02);
+  border-radius: 5px;
+}
+
+/* Highlighting the options in the user's selection can make it more clear to the user what action is being taken. */
+.SelectedFilter{
+  color: var(--col-08);
+}
+
+/* I merged the title and link of the recipe, and setting the displayed text of the link as the recipe name to reduce unnecessary text on the page. The simplified page increases the proportion of pictures. Users can browse the pictures and directly browse the recipes they are interested in and click on the title without spending time hunting for link locations. */
+.RecipeLink{
+  display: block;
+  margin: 0 auto;
+  color: var(--col-05);
+  font-family: monospace;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Make each recipe highlight the title and author to facilitate quick search for users, so the author is also centered above the picture. */
+.Author{
+  text-align: center;
+}
+
+/* Centering images can make recipes more attractive, images with rounded borders can make the overall web page more harmonious and less sharp, and reducing the reference text and text saturation of images can make users pay more attention to the content of the recipe without being distracted. */
+.RecipeImageContainer{
+  display: block;
+  margin: 0 auto;
+}
+
+.RecipeImg{
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.Attribution{
+  margin: 0 auto;
+  color: var(--col-07);
+  font-size: 10px;
+  text-align: center;
+}
+
+/* Make all the rest of the text feel more like a handwritten recipe, so maintain a consistent color and font, which can better make users distinguish the title and content when browsing. */
+.Publisher{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.Cuisine{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.TimeToCook{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.SkillLevel{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.Course{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.Servings{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.Dietary{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.DatePublished{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.DateUpdated{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+.SpecialEquipment{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+/* Make each recipe highlight the title and author to facilitate quick search for users, so the author is also centered above the picture. */
+h1{
+  color: var(--col-06);
+  font-size: 30px;
+  font-family: cursive;
+}
+
+/* Make the author's name more eye-catching and have a sense of signature, making the page more vivid and layered. */
+h2{
+  color: var(--col-08);
+  font-size: 30px;
+  font-family: fantasy;
+  font-style: italic;
+  font-weight: lighter;
+}
+/* Make all the rest of the text feel more like a handwritten recipe, so maintain a consistent color and font, which can better make users distinguish the title and content when browsing. */
+h3{
+  color: var(--col-06);
+  font-family: Papyrus;
+  font-size: 25px;
+}
+
+/* Shadows were added to make the headlines stand out, while the typography and colors kept the overall style. */
+h4{
+  font-size: 60px;
+  text-shadow: 2px 2px 2px;
+  text-align: center;
+}
+
+/* In order to make the author and author name use different fonts and colors but still keep on the same line. */
+h1, h2{
+  display: inline;
+}
