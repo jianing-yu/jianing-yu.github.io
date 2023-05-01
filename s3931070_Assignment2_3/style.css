@@ -1,0 +1,272 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:orange;
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+/* In order to increase the harmony of the overall color of the website, I added a color-changing
+ effect to the title of the page. */
+h1{
+  font-size: 3rem;
+  animation: cycleColour2 5s infinite ease-in alternate;
+}
+
+/* The subtitle uses different colors. I added orange to the color palette, because it blends 
+ harmoniously with blue, purple, and green and adds a certain amount of color contrast and diversity, 
+ highlighting the user experience of the click step. */
+h2{
+  font-size: 2rem;
+  animation: cycleColour3 5s infinite ease-in alternate;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* The mode button will enlarge and change color when the mouse hovers to highlight this option, and
+  the transition process is added to increase the fluency of clicking. No color change after click is
+  added because the stability of the button while changing the background color can make the interface
+  more tidy and maintain the consistency of the website. */
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  transition: 0.7s;
+}
+
+#mode-button:hover{
+  color:#b6e878;
+  font-size: 1rem;
+}
+
+/* code for loading page */
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+/* The load link adds the effect that the font turns blue and becomes larger when the mouse hovers
+  over it. It turns green after clicking to emphasize the main color of the website on the loading
+  interface and better guide users to click the link to enter the website. */
+#load-link{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 0;
+  transition: 1s;
+}
+
+#load-link:hover{
+  font-size: 0.8rem;
+  color: var(--col-03);
+}
+
+#load-link:active{
+  color: var(--col-04);
+}
+
+/* throbber while page is fake loading */
+/* The load throbber uses the style of a progress bar, and its color changes from green to blue to
+  black when the link is clicked. The color change from light to dark indicates the progress of the
+  page loading. */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 35%;
+  height: 0.8rem;
+  background-color: var(--col-04);
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+}
+
+@keyframes cycleColour {
+  0% {
+    background-color: var(--col-04);
+  }
+  50% {
+    background-color: var(--col-03);
+  }
+  100% {
+    background-color: var(--col-01);
+  }
+}
+
+@keyframes cycleColour2 {
+  0% {
+    color: var(--col-04);
+  }
+  50% {
+    color: var(--col-03);
+  }
+  100% {
+    color: var(--col-01);
+  }
+}
+
+@keyframes cycleColour3 {
+  0% {
+    color: var(--col-04);
+  }
+  50% {
+    color: var(--col-05);
+  }
+  100% {
+    color: var(--col-01);
+  }
+}
+
+#load-throbber{
+  animation: cycleColour 11s infinite ease-in-out;
+}
+
+/* All links in the website are set to enlarge the font and change color to the main color of the
+  website when the mouse hovers over it. More eye-catching size and color and transition time make it
+  clearer for users to choose the options to decide whether to click or not. */
+a{
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+a:hover{
+  font-size: 1.25rem;
+  color: var(--col-04);
+}
+
+a:active{
+  color: var(--col-05);
+}
+
+/* The back to top button at the bottom of the website zooms in and changes color when hovered, and 
+  turns orange when clicked. The extended button zoom time gives the user more time to think about 
+  whether to go back to the top. */
+#top{
+  width: 45px;
+  height: 25px;
+  transition: width 2s, height 2s;
+}
+
+#top:hover{
+  background-color: var(--col-04);
+  width: 90px;
+  height: 40px;
+}
+
+#top:active{
+  background-color: var(--col-05);
+  width: 90px;
+  height: 30px;
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
