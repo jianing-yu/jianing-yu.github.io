@@ -1,0 +1,124 @@
+/* Website background*/
+body {
+    background: radial-gradient(circle, #f9d3f0, #febdf1,#d6a5f2, #c7e5f0,  #d1cffa);
+    background-size: 200% 200%;
+    animation: gradientAnimation 20s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+ 
+h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #663d74;
+}
+
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #7d5284;
+}
+
+ /* Search bar */
+.search_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 9999;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #b9b7f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #searchButton:hover {
+    background-color: #f5abcb;
+  }
+
+/* Wireframes */
+.wireframe {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    animation: moveAnimation 10s infinite;
+}
+
+.wireframe.expanded {
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wireframe-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wireframe.expanded .wireframe-content {
+    opacity: 1;
+}
+
+.wireframe.search-match {
+    background-color: #ffb064;
+    opacity: 0.8;
+  }
+
+/* Return to Homepage */
+#homeButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #b9b7f9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+
+#homeButton:hover {
+  background-color: #f5abcb;
+}
